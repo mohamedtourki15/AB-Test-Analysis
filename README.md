@@ -44,11 +44,15 @@ At the 0.05 significance level we fail to reject the null hypothesis. Country (U
 ├── notebooks/
 │   ├── AB_Test_Analysis.ipynb   # full analysis
 │   └── AB_Test_Analysis.html    # exported report (no setup needed to read it)
-└── images/
-    ├── 01_simulated_difference_histogram.png
-    ├── data_preview_with_ab_page.png
-    ├── logistic_regression_interaction_summary.png
-    └── original_screenshots/    # screenshots from the first version of the project
+├── images/
+│   ├── 01_simulated_difference_histogram.png
+│   ├── data_preview_with_ab_page.png
+│   └── logistic_regression_interaction_summary.png
+└── old/                         # the ORIGINAL files before the cleanup, kept for comparison
+    ├── Analyze_ab_test_results_notebook.ipynb
+    ├── Analyze_ab_test_results_notebook.html
+    ├── README.md
+    └── Screenshot 2025-09-14 *.png (4 screenshots)
 ```
 
 ## How to run
@@ -67,5 +71,5 @@ Python, pandas, NumPy, matplotlib, statsmodels, Jupyter Notebook.
 
 ## Notes
 
-- The original screenshots in `images/original_screenshots/` come from an earlier version of the notebook, where the simulation resampled each group from its own data. The current version simulates both groups from the pooled rate, as the null hypothesis requires. The conclusion did not change.
+- The `old/` folder keeps the original notebook, report, README and screenshots. In the original notebook the simulation resampled each group from its own data. The current version simulates both groups from the pooled rate, as the null hypothesis requires. The simulation p-value moved from about 0.906 to 0.908; the conclusion did not change.
 - Dataset and project brief come from the Udacity Data Analyst program.
